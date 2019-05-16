@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
+    include ArticlesHelper
 
     def new
         @article = Article.new
     end
 
     def index
-      @articles=Article.all
+      @articles = Article.all
     end
 
     def show
